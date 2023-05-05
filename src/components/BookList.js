@@ -15,7 +15,9 @@ const BookList = ({ books }) => {
   return (
     <div>
       {bookList?.map((book) => (
-        <Book key={book.id} book={book} onDelete={deleteBook} />
+        <div key={book.id} style={{ display: 'flex' }}>
+          <Book book={book} onDelete={deleteBook} />
+        </div>
       ))}
       <Form />
     </div>

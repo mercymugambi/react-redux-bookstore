@@ -1,3 +1,14 @@
+body,
+html,
+h3,
+p,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
 .appContainer {
   display: flex;
   align-items: center;
@@ -20,16 +31,22 @@
 }
 
 .BookContainer {
-  width: 40%;
+  width: 95%;
+  margin: auto;
+}
+
+.booksUl {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  gap: 70px;
+  box-shadow: 5px 3px 3px 3px rgb(131, 131, 136);
+  margin-bottom: 10px;
 }
 
 .booksLi {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: relative;
-  gap: 30px;
-  box-shadow: 2px 3px 4px rgb(131, 131, 136);
+  width: 40%;
 }
 
 .Booktitle {
@@ -45,9 +62,16 @@ button {
   margin: 10px;
 }
 
+.Newbook {
+  margin-left: 30px;
+}
+
 .formContainer {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  width: 90%;
+  margin-left: 30px;
 }
 
 input {
@@ -57,7 +81,7 @@ input {
 }
 
 .Horizontalrule {
-  width: 40%;
+  width: 95%;
   margin-top: 50px;
-  margin-left: 0;
+  margin-left: auto;
 }

@@ -7,14 +7,21 @@ const Book = ({ book, onDelete }) => {
 
   return (
     <div className="BookContainer">
-      <li className="booksLi">
-        <h3 className="Booktitle">{title}</h3>
-        <p className="BookAuthor">
-          Author:
-          {author}
-        </p>
-        <button type="button" onClick={() => onDelete(id)}>Delete</button>
-      </li>
+      <ul className="booksUl">
+        <li className="booksLi">
+          <h3 className="Booktitle">{title}</h3>
+          <p className="BookAuthor">
+            {author}
+          </p>
+          <button type="button" onClick={() => onDelete(id)}>Delete</button>
+        </li>
+        <p>50% completed</p>
+        <div>
+          <h3>Current Chapter</h3>
+          <p>Chapter 23</p>
+        </div>
+      </ul>
+
     </div>
   );
 };
