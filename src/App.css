@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+body,
+html,
+h3,
+p,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.appContainer {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: left;
+  background-color: #fff;
+  box-shadow: 2px 3px 4px rgb(131, 131, 136);
+  padding: 0 50px;
+  margin-bottom: 80px;
+  height: 40px;
+}
+
+.Logo {
+  color: rgb(22, 173, 243);
+  font-size: 20px;
+}
+
+.links {
+  color: grey;
+  margin-right: 20px;
+}
+
+.BookContainer {
+  width: 95%;
+  margin: auto;
+}
+
+.booksUl {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  gap: 70px;
+  box-shadow: 5px 3px 3px 3px rgb(131, 131, 136);
+  margin-bottom: 10px;
+}
+
+.booksLi {
+  width: 40%;
+}
+
+.Booktitle {
+  color: black;
+}
+
+button {
+  background-color: rgb(22, 173, 243);
+  border: rgb(24, 182, 250);
   color: white;
+  width: 100px;
+  padding: 10px;
+  margin: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.Newbook {
+  margin-left: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.formContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90%;
+  margin-left: 30px;
+}
+
+input {
+  margin-right: 20px;
+  height: 30px;
+  margin-top: 12px;
+}
+
+.Horizontalrule {
+  width: 95%;
+  margin-top: 50px;
+  margin-left: auto;
 }
