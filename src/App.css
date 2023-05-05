@@ -9,6 +9,16 @@
   height: 40px;
 }
 
+.Logo {
+  color: rgb(22, 173, 243);
+  font-size: 20px;
+}
+
+.links {
+  color: grey;
+  margin-right: 20px;
+}
+
 .BookContainer {
   width: 40%;
 }
