@@ -6,9 +6,9 @@ import Navbar from './components/Navbar';
 
 function App() {
   const books = [
-    { id: 1, title: 'Book 1', author: 'Author 1', description: 'Description 1' },
-    { id: 2, title: 'Book 2', author: 'Author 2', description: 'Description 2' },
-    { id: 3, title: 'Book 3', author: 'Author 3', description: 'Description 3' },
+    { id: 1, title: 'Datastructures 1', author: 'Jane' },
+    { id: 2, title: 'Datastructures 2', author: 'Juma' },
+    { id: 3, title: 'Datastructures 3', author: 'Keni',},
   ];
   return (
     <div>

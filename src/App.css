@@ -1,9 +1,54 @@
 .appContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: orange;
+  justify-content: left;
+  background-color: #fff;
+  box-shadow: 2px 3px 4px rgb(131, 131, 136);
   padding: 0 50px;
   margin-bottom: 80px;
   height: 40px;
 }
+
+.BookContainer {
+  width: 40%;
+}
+
+.booksLi {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  gap: 30px;
+  box-shadow: 2px 3px 4px rgb(131, 131, 136);
+}
+
+.Booktitle {
+  color: black;
+}
+
+button {
+  background-color: rgb(22, 173, 243);
+  border: rgb(24, 182, 250);
+  color: white;
+  width: 100px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+input {
+  margin-right: 20px;
+  height: 30px;
+  margin-top: 12px;
+}
+
+.Horizontalrule {
+  width: 40%;
+  margin-top: 50px;
+  margin-left: 0;
+}
+

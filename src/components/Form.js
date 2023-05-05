@@ -3,29 +3,25 @@ import React, { useState } from 'react';
 const Form = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const [description, setDescription] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div>
+      <hr className="Horizontalrule"></hr>
+      <h2>Add New Book</h2>
+      <form className="formContainer" onSubmit={handleSubmit}>
       <label>
-        Title:
-        <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
+        <input type="text" value={title} placeholder = "Title" onChange={(e) => setTitle(e.target.value)} />
       </label>
       <label>
-        Author:
-        <input type="text" value={author} onChange={(e) => setAuthor(e.target.value)} />
-      </label>
-      <label>
-        Description:
-        <textarea value={description} onChange={(e) => setDescription(e.target.value)} />
+        <input type="text" value={author} placeholder = "Author" onChange={(e) => setAuthor(e.target.value)} />
       </label>
       <button type="submit">Add Book</button>
     </form>
+    </div>
   );
 };
 
