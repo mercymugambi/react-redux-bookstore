@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksSlice';
+import AddBook from './AddBook';
 
 const BookList = () => {
   const books = useSelector((state) => state.books);
@@ -26,6 +27,7 @@ const BookList = () => {
           </li>
         ))}
       </ul>
+      <AddBook />
     </div>
   );
 };
