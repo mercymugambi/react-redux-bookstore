@@ -7,7 +7,8 @@ const AddBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
 
-  const handleAddBook = () => {
+  const handleAddBook = (event) => {
+    event.preventDefault();
     const newBook = {
       item_id: `item${Math.floor(Math.random() * 100)}`,
       title,
