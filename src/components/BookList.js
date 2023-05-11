@@ -1,34 +1,31 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import Book from './Book';
-import Form from './Form';
 
-const BookList = ({ books }) => {
-  const [bookList, setBookList] = useState(books);
-
-  const deleteBook = (id) => {
-    const updatedBookList = bookList.filter((book) => book.id !== id);
-    setBookList(updatedBookList);
-  };
-
-  return (
-    <div>
-      {bookList?.map((book) => (
-        <div key={book.id} style={{ display: 'flex' }}>
-          <Book book={book} onDelete={deleteBook} />
-        </div>
-      ))}
-      <Form />
-    </div>
-  );
-};
+const BookList = ({ books }) => (
+  <div>
+    {books.map((book) => (
+      <div key={book.item_id}>
+        <h2>{book.title}</h2>
+        <p>
+          Author:
+          {book.author}
+        </p>
+        <p>
+          Category:
+          {book.category}
+        </p>
+      </div>
+    ))}
+  </div>
+);
 
 BookList.propTypes = {
   books: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      item_id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       author: PropTypes.string.isRequired,
+      category: PropTypes.string.isRequired,
     }),
   ).isRequired,
 };
