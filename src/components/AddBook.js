@@ -12,7 +12,7 @@ const AddBook = () => {
 
     // Validate the form fields
     if (!title || !author) {
-      return; // Do not proceed if the title or author fields are empty
+      return;
     }
 
     const newBook = {
