@@ -17,7 +17,9 @@ const BookList = () => {
       <ul>
         {books.map((book) => (
           <li key={book.item_id}>
+            {' '}
             {book.title}
+            {' '}
             {' '}
             by
             {book.author}
