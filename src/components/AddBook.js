@@ -9,6 +9,12 @@ const AddBook = () => {
 
   const handleAddBook = (event) => {
     event.preventDefault();
+
+    // Validate the form fields
+    if (!title || !author) {
+      return; // Do not proceed if the title or author fields are empty
+    }
+
     const newBook = {
       item_id: `item${Math.floor(Math.random() * 100)}`,
       title,
