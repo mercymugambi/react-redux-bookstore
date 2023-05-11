@@ -37,16 +37,16 @@ li {
 
 .booksUl {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   position: relative;
-  gap: 70px;
-  box-shadow: 5px 3px 3px 3px rgb(131, 131, 136);
-  margin-bottom: 10px;
 }
 
 .booksLi {
-  width: 40%;
+  width: 100%;
+  margin-bottom: 10px;
+  box-shadow: 3px 1px 3px 1px rgb(131, 131, 136);
+  margin-bottom: 10px;
 }
 
 .Booktitle {
@@ -57,9 +57,9 @@ button {
   background-color: rgb(22, 173, 243);
   border: rgb(24, 182, 250);
   color: white;
-  width: 100px;
+  width: 80px;
   padding: 10px;
-  margin: 10px;
+  margin-bottom: 10px;
 }
 
 .Newbook {

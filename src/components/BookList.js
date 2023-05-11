@@ -12,17 +12,14 @@ const BookList = () => {
   };
 
   return (
-    <div>
-      <h2>Books List</h2>
-      <ul>
+    <div className="BookContainer">
+      <ul className="booksUl">
         {books.map((book) => (
-          <li key={book.item_id}>
-            {' '}
-            {book.title}
-            {' '}
-            {' '}
-            by
-            {book.author}
+          <li className="booksLi" key={book.item_id}>
+            <h3 className="Booktitle">{book.title}</h3>
+            <p className="BookAuthor">
+              {book.author}
+            </p>
             <button type="button" onClick={() => handleRemoveBook(book.item_id)}>
               Remove
             </button>
