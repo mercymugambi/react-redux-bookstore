@@ -1,36 +1,34 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import Book from './Book';
-import Form from './Form';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/booksSlice';
+import AddBook from './AddBook';
 
-const BookList = ({ books }) => {
-  const [bookList, setBookList] = useState(books);
+const BookList = () => {
+  const books = useSelector((state) => state.books);
+  const dispatch = useDispatch();
 
-  const deleteBook = (id) => {
-    const updatedBookList = bookList.filter((book) => book.id !== id);
-    setBookList(updatedBookList);
+  const handleRemoveBook = (itemId) => {
+    dispatch(removeBook(itemId));
   };
 
   return (
-    <div>
-      {bookList?.map((book) => (
-        <div key={book.id} style={{ display: 'flex' }}>
-          <Book book={book} onDelete={deleteBook} />
-        </div>
-      ))}
-      <Form />
+    <div className="BookContainer">
+      <ul className="booksUl">
+        {books.map((book) => (
+          <li className="booksLi" key={book.item_id}>
+            <h3 className="Booktitle">{book.title}</h3>
+            <p className="BookAuthor">
+              {book.author}
+            </p>
+            <button type="button" onClick={() => handleRemoveBook(book.item_id)}>
+              Remove
+            </button>
+          </li>
+        ))}
+      </ul>
+      <AddBook />
     </div>
   );
-};
-
-BookList.propTypes = {
-  books: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
 };
 
 export default BookList;
