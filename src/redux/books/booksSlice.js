@@ -6,26 +6,32 @@ export const fetchBooks = createAsyncThunk('books/fetchBooks', async () => {
   return response.data;
 });
 
-export const addNewBook = createAsyncThunk('books/addNewBook', async (bookData) => {
+export const addBook = createAsyncThunk('books/addNewBook', async (bookData) => {
   const response = await axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/books', bookData);
   return response.data;
 });
 
 export const removeBook = createAsyncThunk('books/removeBook', async (bookId) => {
-    await axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/abc123/books/item_id/${bookId}`);
-    return bookId;
-  });
+  await axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/abc123/books/${bookId}`);
 
-const initialState = [];
+  return bookId;
+});
 
 const booksSlice = createSlice({
   name: 'books',
-  initialState,
-  reducers: {
-    addBook: (state, action) => [...state, action.payload],
-    removeBook: (state, action) => state.filter((book) => book.item_id !== action.payload),
+  initialState: [],
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchBooks.fulfilled, (state, action) => action.payload)
+      .addCase(addBook.fulfilled, (state, action) => {
+        state.push(action.payload);
+      })
+      .addCase(removeBook.fulfilled, (state, action) =>
+        // eslint-disable-next-line implicit-arrow-linebreak
+        state.filter((book) => book.item_id !== action.payload));
   },
 });
 
-export const { addBook, removeBook } = booksSlice.actions;
-export default booksSlice.reducer;
+export const booksReducer = booksSlice.reducer;
+export default booksSlice.actions;
