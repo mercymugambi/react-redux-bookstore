@@ -6,6 +6,11 @@ export const fetchBooks = createAsyncThunk('books/fetchBooks', async () => {
     return response.data;
   });
 
+  export const addNewBook = createAsyncThunk('books/addNewBook', async (bookData) => {
+    const response = await axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/books', bookData);
+    return response.data;
+  });
+
 const initialState = [];
 
 const booksSlice = createSlice({
