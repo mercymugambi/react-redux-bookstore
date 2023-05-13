@@ -20,6 +20,10 @@ body {
 }
 
 .panel-bg {
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
   width: 87.5rem;
   height: 5.938rem;
   margin: 0 0 2.375rem;
@@ -41,9 +45,33 @@ body {
   color: #0290ff;
 }
 
-.links {
-  color: grey;
-  margin-right: 20px;
+.BOOKS {
+  width: 3.688rem;
+  height: 1rem;
+  margin: 1.125rem 2.563rem 0.688rem 0;
+  font-family: Montserrat;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.CATEGORIES {
+  width: 6.563rem;
+  height: 1rem;
+  margin: 1.125rem 41.5rem 0.688rem 2.563rem;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
 }
 
 .BookContainer {

@@ -9,8 +9,8 @@ function Navbar() {
           Bookstore CMS
         </span>
         <ul className="navLinks">
-          <Link className="links" to="/">BookList</Link>
-          <Link className="links" to="/categories">Categories</Link>
+          <Link className="BOOKS" to="/">BOOKS</Link>
+          <Link className="CATEGORIES" to="/categories">CATEGORIES</Link>
         </ul>
       </nav>
       <Outlet />
