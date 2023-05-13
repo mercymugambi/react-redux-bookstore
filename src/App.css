@@ -36,7 +36,6 @@ body {
 }
 
 .Bookstore-CMS {
-  width: 25%;
   height: 2.313rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.875rem;
@@ -46,6 +45,7 @@ body {
   line-height: normal;
   letter-spacing: normal;
   color: #0290ff;
+  white-space: nowrap;
 }
 
 .BOOKS {
@@ -249,7 +249,7 @@ body {
 }
 
 .Current-Chapter {
-  width: 7.875rem;
+  width: 9.875rem;
   height: 1.125rem;
   margin: 0.063rem 5.375rem 0 3.688rem;
   opacity: 0.5;
@@ -265,7 +265,7 @@ body {
 }
 
 .Current-Lesson {
-  width: 4.688rem;
+  width: 6.688rem;
   height: 1.313rem;
   margin: 0.438rem 6.813rem 0.25rem 3.688rem;
   font-family: 'RobotoSlab', sans-serif;
