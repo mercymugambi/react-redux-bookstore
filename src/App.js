@@ -11,7 +11,7 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getBooks());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>

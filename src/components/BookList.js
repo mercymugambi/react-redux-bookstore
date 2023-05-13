@@ -18,7 +18,7 @@ const BookList = () => {
           <li className="booksLi" key={book.id}>
             <h3 className="Booktitle">{book.book.title}</h3>
             <p className="BookAuthor">{book.book.author}</p>
-            {/* <p className="BookAuthor">{book.book.category}</p> */}
+            <p className="BookCategory">{book.book.category}</p>
             <button type="button" onClick={() => handleRemoveBook(book.id)}>
               Remove
             </button>
