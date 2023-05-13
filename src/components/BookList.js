@@ -46,6 +46,20 @@ const BookList = () => {
               </span>
             </div>
           </div>
+          <div className="Line-3" />
+          <div className="updateChapter">
+            <span className="Current-Chapter Text-Style-7">
+              Current Chapter
+            </span>
+            <span className="Current-Lesson Text-Style-4">
+              Chapter 17
+            </span>
+            <div className="Rectangle-2">
+              <span className="Update-progress">
+                Update progress
+              </span>
+            </div>
+          </div>
         </li>
       ))}
       <AddBook />
