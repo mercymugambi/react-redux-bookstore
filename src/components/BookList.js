@@ -12,19 +12,30 @@ const BookList = () => {
   };
 
   return (
-    <div>
-      <ul className="booksUl">
-        {books.map((book) => (
-          <li className="Lesson-Panel" key={book.id}>
-            <p className="BookCategory">{book.book.category}</p>
-            <h3 className="Booktitle">{book.book.title}</h3>
+    <div className="booksUl">
+      {books.map((book) => (
+        <li className="Lesson-Panel" key={book.id}>
+          <div className="firstColumn">
+            <p className="School-of">{book.book.category}</p>
+            <h3 className="Title">{book.book.title}</h3>
             <p className="BookAuthor">{book.book.author}</p>
-            <button type="button" onClick={() => handleRemoveBook(book.id)}>
-              Remove
-            </button>
-          </li>
-        ))}
-      </ul>
+            <div className="footer">
+              <span className="Comments Text-Style-8">
+                Comments
+              </span>
+              <div className="Line-2" />
+              <button className="Remove" type="button" onClick={() => handleRemoveBook(book.id)}>
+                Remove
+              </button>
+              <div className="Line-2" />
+              <span className="Edit Text-Style-8">
+                Edit
+              </span>
+            </div>
+          </div>
+          <div className="Oval-2" />
+        </li>
+      ))}
       <AddBook />
     </div>
   );

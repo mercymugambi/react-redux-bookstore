@@ -1,4 +1,3 @@
-body,
 html,
 h3,
 p,
@@ -10,10 +9,11 @@ li {
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
   width: 100%;
-  height: auto;
-  margin: 0 2.5rem 4.063rem 0;
-  padding: 0 0 49.625rem;
   border-radius: 4px;
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
   background-color: #fafafa;
@@ -24,11 +24,17 @@ body {
   flex-direction: row;
   justify-content:flex-start;
   align-items: center;
-  width: 87.5rem;
   height: 5.938rem;
   margin: 0 0 2.375rem;
   padding: 1.438rem 6.188rem 1.688rem 6.25rem;
   background-color: #fff;
+  border: 2px solid rebeccapurple;
+}
+
+.booksUl {
+  width: 100%;
+  height: auto;
+  border: 1px dotted green;
 }
 
 .Bookstore-CMS {
@@ -83,38 +89,107 @@ body {
 
 .Lesson-Panel {
   width: 75rem;
-  height: 10.625rem;
-  margin: 2.313rem 6.25rem 0;
-  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  height: auto;
+  margin: 10px auto;
+  padding: 2rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
 }
 
-.booksUl {
+.School-of {
+  width: 3.063rem;
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.Title {
+  width: 12.313rem;
+  height: 1.813rem;
+  margin: 0.188rem 20.188rem 0 0;
+  font-family: RobotoSlab;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.BookAuthor {
+  width: 6.688rem;
+  height: 1.188rem;
+  margin: 0.25rem 0 0;
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.footer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  position: relative;
+  justify-content:space-between;
+  width: 20%;
 }
 
-.booksLi {
-  width: 100%;
-  box-shadow: 3px 1px 3px 1px rgb(131, 131, 136);
-  margin-bottom: 10px;
+.Comments {
+  width: 4.563rem;
+  height: 1.188rem;
+  margin: 0.188rem 0.938rem 0.125rem 0;
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
 }
 
-.Booktitle {
-  color: black;
+.Line-2 {
+  width: 0.1rem;
+  height: 1.5rem;
+  /* margin: 0.75rem 1.063rem 0 0.938rem; */
+  border: solid 1px #faf7f7;
 }
 
-button {
-  background-color: rgb(22, 173, 243);
-  border: rgb(24, 182, 250);
-  color: white;
-  width: 80px;
-  padding: 10px;
-  margin-bottom: 10px;
+.Remove {
+  width: 3.375rem;
+  height: 1.188rem;
+  margin: 0.188rem 0.938rem 0.125rem 0;
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.Oval-2 {
+  width: 4.25rem;
+  height: 4.25rem;
+  border-style: solid;
+  border-width: 5px;
+  border-image-source: linear-gradient(to bottom, var(--medium-blue), #379cf6);
+  border-image-slice: 1;
 }
 
 .Newbook {
