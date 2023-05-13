@@ -48,14 +48,14 @@ const AddBook = () => {
   };
 
   return (
-    <div>
+    <div className="addbookcontainer">
       <hr className="Horizontalrule" />
       <h2 className="Newbook">Add New Book</h2>
       <form className="formContainer">
-        <input type="text" value={title} placeholder="Title" onChange={(e) => setTitle(e.target.value)} />
-        <input type="text" value={author} placeholder="Author" onChange={(e) => setAuthor(e.target.value)} />
+        <input type="text" className="bookTitle" value={title} placeholder="Title" onChange={(e) => setTitle(e.target.value)} />
+        <input type="text" className="bookAuthor" value={author} placeholder="Author" onChange={(e) => setAuthor(e.target.value)} />
         <Dropdowns category={category} onCategoryChange={handleCategoryChange} />
-        <button type="button" onClick={handleAddBook}>Add Book</button>
+        <button type="button" className="Rectangle-3" onClick={handleAddBook}>Add Book</button>
       </form>
     </div>
   );
