@@ -1,7 +1,9 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { CircularProgressbar } from 'react-circular-progressbar';
 import { deleteBookFromApi } from '../redux/books/booksSlice';
 import AddBook from './AddBook';
+import 'react-circular-progressbar/dist/styles.css';
 
 const BookList = () => {
   const books = useSelector((state) => state.books.books);
@@ -33,7 +35,17 @@ const BookList = () => {
               </span>
             </div>
           </div>
-          <div className="Oval-2" />
+          <div className="Oval">
+            <CircularProgressbar className="Oval-2" value={67} text={`${67}%`} />
+            <div className="progress">
+              <span className="Percent-Complete">
+                64%
+              </span>
+              <span className="Completed Text-Style-2">
+                Completed
+              </span>
+            </div>
+          </div>
         </li>
       ))}
       <AddBook />
