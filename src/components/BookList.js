@@ -12,10 +12,10 @@ const BookList = () => {
   };
 
   return (
-    <div className="BookContainer">
+    <div>
       <ul className="booksUl">
         {books.map((book) => (
-          <li className="booksLi" key={book.id}>
+          <li className="Lesson-Panel" key={book.id}>
             <p className="BookCategory">{book.book.category}</p>
             <h3 className="Booktitle">{book.book.title}</h3>
             <p className="BookAuthor">{book.book.author}</p>
