@@ -1,11 +1,30 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { addBooksToApi } from '../redux/books/booksSlice';
+import Dropdowns from './Dropdowns';
+
+const RandomIdgenerator = () => {
+  const alphanumericCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const idLength = 5;
+
+  let randomId = '';
+  for (let i = 0; i < idLength; i += 1) {
+    const randomIndex = Math.floor(Math.random() * alphanumericCharacters.length);
+    randomId += alphanumericCharacters[randomIndex];
+  }
+
+  return randomId;
+};
 
 const AddBook = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
+
+  const handleCategoryChange = (selectedCategory) => {
+    setCategory(selectedCategory);
+  };
 
   const handleAddBook = (event) => {
     event.preventDefault();
@@ -16,13 +35,16 @@ const AddBook = () => {
     }
 
     const newBook = {
-      item_id: `item${Math.floor(Math.random() * 100)}`,
+      item_id: RandomIdgenerator(),
       title,
       author,
+      category,
     };
-    dispatch(addBook(newBook));
-    setTitle('');
-    setAuthor('');
+    dispatch(addBooksToApi(newBook))
+      .then(() => {
+        setTitle('');
+        setAuthor('');
+      });
   };
 
   return (
@@ -32,7 +54,8 @@ const AddBook = () => {
       <form className="formContainer">
         <input type="text" value={title} placeholder="Title" onChange={(e) => setTitle(e.target.value)} />
         <input type="text" value={author} placeholder="Author" onChange={(e) => setAuthor(e.target.value)} />
-        <button type="submit" onClick={handleAddBook}>Add Book</button>
+        <Dropdowns category={category} onCategoryChange={handleCategoryChange} />
+        <button type="button" onClick={handleAddBook}>Add Book</button>
       </form>
     </div>
   );
