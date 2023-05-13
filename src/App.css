@@ -28,13 +28,11 @@ body {
   margin: 0 0 2.375rem;
   padding: 1.438rem 6.188rem 1.688rem 6.25rem;
   background-color: #fff;
-  border: 2px solid rebeccapurple;
 }
 
 .booksUl {
   width: 100%;
   height: auto;
-  border: 1px dotted green;
 }
 
 .Bookstore-CMS {
@@ -168,7 +166,7 @@ body {
 .Line-2 {
   width: 0.1rem;
   height: 1.5rem;
-  /* margin: 0.75rem 1.063rem 0 0.938rem; */
+  margin-right: 10px;
   border: solid 1px #faf7f7;
 }
 
@@ -184,6 +182,8 @@ body {
   line-height: normal;
   letter-spacing: normal;
   color: #4386bf;
+  border: none;
+  background-color: transparent;
 }
 
 .Oval {
@@ -301,7 +301,6 @@ body {
   border: solid 1px #e8e8e8;
 }
 
-
 .Newbook {
   margin-left: 30px;
 }
@@ -321,7 +320,7 @@ input {
 }
 
 .Horizontalrule {
-  width: 95%;
+  width: 79rem;
   margin-top: 50px;
   margin-left: auto;
 }
