@@ -11,7 +11,7 @@ const Dropdowns = ({ onCategoryChange }) => {
   };
 
   return (
-    <select value={category} onChange={handleCategoryChange} placeholder="Category">
+    <select className="category" value={category} onChange={handleCategoryChange} placeholder="Category">
       <option value="Select">Select Categories</option>
       <option value="Action">Action</option>
       <option value="Science">Science Fiction</option>

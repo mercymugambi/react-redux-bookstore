@@ -1,4 +1,3 @@
-body,
 html,
 h3,
 p,
@@ -9,78 +8,373 @@ li {
   list-style: none;
 }
 
-.appContainer {
+body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fafafa;
+}
+
+.panel-bg {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: left;
+  height: 5.938rem;
+  margin: 0 0 2.375rem;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
   background-color: #fff;
-  box-shadow: 2px 3px 4px rgb(131, 131, 136);
-  padding: 0 50px;
-  margin-bottom: 80px;
-  height: 40px;
-}
-
-.Logo {
-  color: rgb(22, 173, 243);
-  font-size: 20px;
-}
-
-.links {
-  color: grey;
-  margin-right: 20px;
-}
-
-.BookContainer {
-  width: 95%;
-  margin: auto;
 }
 
 .booksUl {
+  width: 100%;
+  height: auto;
+}
+
+.Bookstore-CMS {
+  height: 2.313rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+  white-space: nowrap;
+}
+
+.BOOKS {
+  width: 3.688rem;
+  height: 1rem;
+  margin: 1.125rem 2.563rem 0.688rem 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  text-decoration: none;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.CATEGORIES {
+  width: 6.563rem;
+  height: 1rem;
+  margin: 1.125rem 41.5rem 0.688rem 2.563rem;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  text-decoration: none;
+  color: #121212;
+}
+
+.Line {
+  width: 87.5rem;
+  height: 0.125rem;
+  margin: 5.875rem 0 2.313rem;
+  border: solid 1px #e8e8e8;
+}
+
+.Lesson-Panel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 75rem;
+  height: auto;
+  margin: 10px auto;
+  padding: 2rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+.firstColumn {
+  width: 50%;
+}
+
+.School-of {
+  width: 3.063rem;
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.Title {
+  height: 1.813rem;
+  margin: 0.188rem 20.188rem 0 0;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.BookAuthor {
+  width: 6.688rem;
+  height: 1.188rem;
+  margin: 0.25rem 0 0;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.Edit {
+  color: #4386bf;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.Comments {
+  width: 4.563rem;
+  height: 1.188rem;
+  margin: 0.188rem 0.938rem 0.125rem 0;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.Line-2 {
+  width: 0.1rem;
+  height: 1.5rem;
+  margin-right: 10px;
+  border: solid 1px #faf7f7;
+}
+
+.Remove {
+  width: 3.375rem;
+  height: 1.188rem;
+  margin: 0.188rem 0.938rem 0.125rem 0;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  border: none;
+  background-color: transparent;
+}
+
+.Oval {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.Oval-2 {
+  width: 4.25rem;
+  height: 4.25rem;
+  margin: 10px;
+}
+
+.Percent-Complete {
+  width: 4.25rem;
+  height: 2.438rem;
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.Completed {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.progress {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  position: relative;
 }
 
-.booksLi {
-  width: 100%;
-  box-shadow: 3px 1px 3px 1px rgb(131, 131, 136);
-  margin-bottom: 10px;
+.updateChapter {
+  display: flex;
+  flex-direction: column;
 }
 
-.Booktitle {
-  color: black;
+.Current-Chapter {
+  width: 9.875rem;
+  height: 1.125rem;
+  margin: 0.063rem 5.375rem 0 3.688rem;
+  opacity: 0.5;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
 }
 
-button {
-  background-color: rgb(22, 173, 243);
-  border: rgb(24, 182, 250);
-  color: white;
-  width: 80px;
-  padding: 10px;
-  margin-bottom: 10px;
+.Current-Lesson {
+  width: 6.688rem;
+  height: 1.313rem;
+  margin: 0.438rem 6.813rem 0.25rem 3.688rem;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.Rectangle-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 11.5rem;
+  height: 2.063rem;
+  margin: 0.75rem 0 0.563rem 3.688rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+}
+
+.Update-progress {
+  width: 8.938rem;
+  height: 1.125rem;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+}
+
+.Line-3 {
+  height: 4.375rem;
+  border: solid 1px #e8e8e8;
 }
 
 .Newbook {
-  margin-left: 30px;
+  width: 10.875rem;
+  height: 1.5rem;
+  padding-left: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
 }
 
 .formContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 90%;
-  margin-left: 30px;
+  justify-content: center;
+  width: 93%;
+  margin: 40px auto;
 }
 
-input {
-  margin-right: 20px;
-  height: 30px;
-  margin-top: 12px;
+.bookTitle {
+  width: 40%;
+  height: 2.813rem;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+.bookAuthor {
+  width: 20%;
+  height: 2.813rem;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  color: #c4c4c4;
+}
+
+.category {
+  width: 20%;
+  height: 4rem;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  color: #c4c4c4;
 }
 
 .Horizontalrule {
-  width: 95%;
+  width: 79rem;
   margin-top: 50px;
   margin-left: auto;
+}
+
+.Rectangle-3 {
+  width: 11.5rem;
+  height: 4rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  color: #fff;
 }

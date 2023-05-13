@@ -1,7 +1,9 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { CircularProgressbar } from 'react-circular-progressbar';
 import { deleteBookFromApi } from '../redux/books/booksSlice';
 import AddBook from './AddBook';
+import 'react-circular-progressbar/dist/styles.css';
 
 const BookList = () => {
   const books = useSelector((state) => state.books.books);
@@ -12,19 +14,54 @@ const BookList = () => {
   };
 
   return (
-    <div className="BookContainer">
-      <ul className="booksUl">
-        {books.map((book) => (
-          <li className="booksLi" key={book.id}>
-            <p className="BookCategory">{book.book.category}</p>
-            <h3 className="Booktitle">{book.book.title}</h3>
+    <div className="booksUl">
+      {books.map((book) => (
+        <li className="Lesson-Panel" key={book.id}>
+          <div className="firstColumn">
+            <p className="School-of">{book.book.category}</p>
+            <h3 className="Title">{book.book.title}</h3>
             <p className="BookAuthor">{book.book.author}</p>
-            <button type="button" onClick={() => handleRemoveBook(book.id)}>
-              Remove
-            </button>
-          </li>
-        ))}
-      </ul>
+            <div className="footer">
+              <span className="Comments Text-Style-8">
+                Comments
+              </span>
+              <div className="Line-2" />
+              <button className="Remove" type="button" onClick={() => handleRemoveBook(book.id)}>
+                Remove
+              </button>
+              <div className="Line-2" />
+              <span className="Edit Text-Style-8">
+                Edit
+              </span>
+            </div>
+          </div>
+          <div className="Oval">
+            <CircularProgressbar className="Oval-2" value={67} text={`${67}%`} />
+            <div className="progress">
+              <span className="Percent-Complete">
+                64%
+              </span>
+              <span className="Completed Text-Style-2">
+                Completed
+              </span>
+            </div>
+          </div>
+          <div className="Line-3" />
+          <div className="updateChapter">
+            <span className="Current-Chapter Text-Style-7">
+              Current Chapter
+            </span>
+            <span className="Current-Lesson Text-Style-4">
+              Chapter 17
+            </span>
+            <div className="Rectangle-2">
+              <span className="Update-progress">
+                Update progress
+              </span>
+            </div>
+          </div>
+        </li>
+      ))}
       <AddBook />
     </div>
   );
