@@ -98,7 +98,7 @@ Ability to remove books added to booklist by delete
 
 <!-- ## 🚀 Live Demo <a name="live-demo"></a> -->
 
-<!-- - [Live Demo Link](https://math-magician-ji5f.onrender.com/) -->
+- [Live Demo Link](https://bookstore-react-redux-e6pz.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
